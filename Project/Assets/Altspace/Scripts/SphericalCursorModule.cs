@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 public class SphericalCursorModule : MonoBehaviour {
 	// This is a sensitivity parameter that should adjust how sensitive the mouse control is.
@@ -24,29 +25,67 @@ public class SphericalCursorModule : MonoBehaviour {
 	private const float MaxDistance = 100.0f;
 
 	// Sphere radius to project cursor onto if no raycast hit.
-	private const float SphereRadius = 1000.0f;
+	private const float SphereRadius = 20.0f;
 
     void Awake() {
 		Cursor = transform.Find("Cursor").gameObject;
+
 		CursorMeshRenderer = Cursor.transform.GetComponentInChildren<MeshRenderer>();
         CursorMeshRenderer.renderer.material.color = new Color(0.0f, 0.8f, 1.0f);
     }	
 
 	void Update()
 	{
-		// TODO: Handle mouse movement to update cursor position.
-
-		// TODO: Perform ray cast to find object cursor is pointing at.
-		// TODO: Update cursor transform.
-		var cursorHit = new RaycastHit();/* Your cursor hit code should set this properly. */;
+		// Handle mouse movement to update cursor position.
+		// Get the mouse inputs and apply the sensitivity
+		float mouseX = Input.GetAxis("Mouse X") * this.Sensitivity;
+		float mouseY = Input.GetAxis("Mouse Y") * this.Sensitivity;
+		// Get the distance to the cursor
+		float distanceToCursor = Vector3.Distance(this.transform.position, this.Cursor.transform.position);
+		// Update the cursor using its distance as a modifer to ensure it moves at same speed when far away
+		this.Cursor.transform.Translate(new Vector3(mouseX * distanceToCursor, mouseY * distanceToCursor, 0));
+		// get the direction from us to the cursor
+		Vector3 cursorDirection = (this.Cursor.transform.position - this.transform.position);
+		// normalize the direction
+		cursorDirection.Normalize();
+		// Perform ray cast to find object cursor is pointing at.
+		RaycastHit[] cursorHits = Physics.RaycastAll(this.transform.position, cursorDirection, SphericalCursorModule.MaxDistance, SphericalCursorModule.ColliderMask);	
+		RaycastHit cursorHit = new RaycastHit();	
+		// find the closest cursor hit to us
+		float cursorHitPointDistance = float.MaxValue;
+		// if we got a hit...
+		if (cursorHits.Length > 0) {
+			foreach (RaycastHit hit in cursorHits) {
+				float dist = Vector3.Distance(hit.point, this.transform.position);
+				if (dist < cursorHitPointDistance) {
+					cursorHit = hit;
+					cursorHitPointDistance = dist;
+				}
+			}
+		}
 
 		// Update highlighted object based upon the raycast.
-		if (cursorHit.collider != null)
-		{
+		// If the cursor hit an object
+		if (cursorHit.collider != null) {
+			// place the cursor at the hit point position
+			this.Cursor.transform.position = cursorHit.point;
+			// set the cursor scale based on the distance to the hit point
+			float cursorScale = (cursorHitPointDistance * this.DistanceScaleFactor + 1.0f) / 2.0f;
+			this.Cursor.transform.localScale = new Vector3(cursorScale, cursorScale, cursorScale);
+			// update the current selection
 			Selectable.CurrentSelection = cursorHit.collider.gameObject;
 		}
-		else
-		{
+		else {
+			// we didn't hit anything, so let's put the cursor on the surface of a virtual sphere around the player
+			// first position it at our origin
+			this.Cursor.transform.position = this.transform.position;
+			// aim it in the direction from us to the cursor
+			this.Cursor.transform.forward = cursorDirection;
+			// place it on the surface of the sphere
+			this.Cursor.transform.Translate(Vector3.forward * SphereRadius);
+			// revert the scale to default
+			this.Cursor.transform.localScale = this.DefaultCursorScale;
+			// reset the current selection
 			Selectable.CurrentSelection = null;
 		}
 	}
