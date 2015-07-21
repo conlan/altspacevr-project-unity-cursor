@@ -2,6 +2,10 @@
 
 ## Description
 
+# Some Objectives:
+
+Find your phone!
+
 ## Instructions
     
 ## Known Issues
