@@ -63,6 +63,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Altspace\Scripts\Interactable\Interactable.cs" />
+    <Compile Include="Assets\Altspace\Scripts\Interactable\LightSwitch.cs" />
     <Compile Include="Assets\Altspace\Scripts\LockCursor.cs" />
     <Compile Include="Assets\Altspace\Scripts\SphericalCursorModule.cs" />
     <Compile Include="Assets\Selectable.cs" />

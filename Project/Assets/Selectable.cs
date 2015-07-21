@@ -24,6 +24,15 @@ public class Selectable : MonoBehaviour {
 					renderer.sharedMaterial = HighlightMaterial;
 				}
 			}
+
+			// check if the player clicks while highlighting a selection
+			if (Input.GetButtonDown("Fire1")) {
+				Interactable interactable = CurrentSelection.GetComponent<Interactable>();
+
+				if (interactable != null) {
+					interactable.Interact();
+				}
+			}
 		}
 		else
 		{

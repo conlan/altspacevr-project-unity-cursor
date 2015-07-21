@@ -28,12 +28,16 @@ public class MouseLook : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 
+	public static bool isLooking;
+
 	float rotationY = 0F;
 
 	void Update ()
 	{
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
+			MouseLook.isLooking = true;
+
 			if (axes == RotationAxes.MouseXAndY)
 			{
 				float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
@@ -54,6 +58,8 @@ public class MouseLook : MonoBehaviour {
 				
 				transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 			}
+		} else {
+			MouseLook.isLooking = false;
 		}
 	}
 	
