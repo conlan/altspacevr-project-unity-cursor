@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: b76aecf63e7c242d690052ea363f2e34
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: +
+    100002: +.2
+    100004: '-'
+    100006: -.2
+    100008: 1
+    100010: 1.2
+    100012: 1.3
+    100014: 1.4
+    100016: 19
+    100018: 9
+    100020: a
+    100022: Altavoz
+    100024: Altavoz.2
+    100026: Bool Pantalla
+    100028: Bool Pantalla.2
+    100030: Booleano
+    100032: Booleano.1
+    100034: Booleano.2
+    100036: Booleano.2.2
+    100038: Booleano.3
+    100040: C__psula
+    100042: Camara Frontal
+    100044: Cilindro
+    100046: Cilindro.1
+    100048: Cilindro.2
+    100050: Cilindro.3
+    100052: Cilindro.4
+    100054: Cubo
+    100056: Cubo.1
+    100058: Disco
+    100060: Disco.1
+    100062: e
+    100064: e.2
+    100066: g
+    100068: i
+    100070: //RootNode
+    100072: l
+    100074: Luz
+    100076: Luz.1
+    100078: Luz.2
+    100080: Luz.3
+    100082: Luz.4
+    100084: M
+    100086: Megapixels
+    100088: Micro
+    100090: 'Nulo '
+    100092: Nurbes Altavoces
+    100094: Nurbes Altavoces.2
+    100096: Nurbes Micro,Boton,Camara
+    100098: 'NURBS Extrusi__n '
+    100100: NURBS Extrusi__n .2
+    100102: NURBS Extrusi__n .3
+    100104: NURBS Extrusi__n .4
+    100106: NURBS Extrusi__n .5
+    100108: NURBS Extrusi__n .6
+    100110: NURBS Forro
+    100112: NURBS Forro.1
+    100114: NURBS Forro.2
+    100116: NURBS Forro.3
+    100118: NURBS Forro.4
+    100120: NURBS Forro.5
+    100122: NURBS Forro.6
+    100124: Nurbs Pantalla
+    100126: Nurbs Pantalla.2
+    100128: Objeto Texto
+    100130: Objeto Texto.1
+    100132: Objeto Texto.2
+    100134: p
+    100136: Pantalla LED
+    100138: Pantalla LED.2
+    100140: Rect__ngulo
+    100142: Rect__ngulo.2
+    100144: Rect__ngulo.3
+    100146: Redondeado 1
+    100148: Redondeado 1.2
+    100150: Redondeado 2
+    100152: Redondeado 2.2
+    100154: s
+    100156: Speakers
+    100158: Speakers.2
+    100160: Speakers.3
+    100162: Tapa 1
+    100164: Tapa 1.10
+    100166: Tapa 1.11
+    100168: Tapa 1.12
+    100170: Tapa 1.13
+    100172: Tapa 1.14
+    100174: Tapa 1.15
+    100176: Tapa 1.16
+    100178: Tapa 1.17
+    100180: Tapa 1.18
+    100182: Tapa 1.2
+    100184: Tapa 1.3
+    100186: Tapa 1.4
+    100188: Tapa 1.5
+    100190: Tapa 1.6
+    100192: Tapa 1.7
+    100194: Tapa 1.8
+    100196: Tapa 1.9
+    100198: Tapa 2
+    100200: Tapa 2.10
+    100202: Tapa 2.11
+    100204: Tapa 2.12
+    100206: Tapa 2.13
+    100208: Tapa 2.14
+    100210: Tapa 2.15
+    100212: Tapa 2.16
+    100214: Tapa 2.17
+    100216: Tapa 2.18
+    100218: Tapa 2.2
+    100220: Tapa 2.3
+    100222: Tapa 2.4
+    100224: Tapa 2.5
+    100226: Tapa 2.6
+    100228: Tapa 2.7
+    100230: Tapa 2.8
+    100232: Tapa 2.9
+    100234: Texto
+    100236: Texto.2
+    100238: Texto.3
+    100240: x
+    400000: +
+    400002: +.2
+    400004: '-'
+    400006: -.2
+    400008: 1
+    400010: 1.2
+    400012: 1.3
+    400014: 1.4
+    400016: 19
+    400018: 9
+    400020: a
+    400022: Altavoz
+    400024: Altavoz.2
+    400026: Bool Pantalla
+    400028: Bool Pantalla.2
+    400030: Booleano
+    400032: Booleano.1
+    400034: Booleano.2
+    400036: Booleano.2.2
+    400038: Booleano.3
+    400040: C__psula
+    400042: Camara Frontal
+    400044: Cilindro
+    400046: Cilindro.1
+    400048: Cilindro.2
+    400050: Cilindro.3
+    400052: Cilindro.4
+    400054: Cubo
+    400056: Cubo.1
+    400058: Disco
+    400060: Disco.1
+    400062: e
+    400064: e.2
+    400066: g
+    400068: i
+    400070: //RootNode
+    400072: l
+    400074: Luz
+    400076: Luz.1
+    400078: Luz.2
+    400080: Luz.3
+    400082: Luz.4
+    400084: M
+    400086: Megapixels
+    400088: Micro
+    400090: 'Nulo '
+    400092: Nurbes Altavoces
+    400094: Nurbes Altavoces.2
+    400096: Nurbes Micro,Boton,Camara
+    400098: 'NURBS Extrusi__n '
+    400100: NURBS Extrusi__n .2
+    400102: NURBS Extrusi__n .3
+    400104: NURBS Extrusi__n .4
+    400106: NURBS Extrusi__n .5
+    400108: NURBS Extrusi__n .6
+    400110: NURBS Forro
+    400112: NURBS Forro.1
+    400114: NURBS Forro.2
+    400116: NURBS Forro.3
+    400118: NURBS Forro.4
+    400120: NURBS Forro.5
+    400122: NURBS Forro.6
+    400124: Nurbs Pantalla
+    400126: Nurbs Pantalla.2
+    400128: Objeto Texto
+    400130: Objeto Texto.1
+    400132: Objeto Texto.2
+    400134: p
+    400136: Pantalla LED
+    400138: Pantalla LED.2
+    400140: Rect__ngulo
+    400142: Rect__ngulo.2
+    400144: Rect__ngulo.3
+    400146: Redondeado 1
+    400148: Redondeado 1.2
+    400150: Redondeado 2
+    400152: Redondeado 2.2
+    400154: s
+    400156: Speakers
+    400158: Speakers.2
+    400160: Speakers.3
+    400162: Tapa 1
+    400164: Tapa 1.10
+    400166: Tapa 1.11
+    400168: Tapa 1.12
+    400170: Tapa 1.13
+    400172: Tapa 1.14
+    400174: Tapa 1.15
+    400176: Tapa 1.16
+    400178: Tapa 1.17
+    400180: Tapa 1.18
+    400182: Tapa 1.2
+    400184: Tapa 1.3
+    400186: Tapa 1.4
+    400188: Tapa 1.5
+    400190: Tapa 1.6
+    400192: Tapa 1.7
+    400194: Tapa 1.8
+    400196: Tapa 1.9
+    400198: Tapa 2
+    400200: Tapa 2.10
+    400202: Tapa 2.11
+    400204: Tapa 2.12
+    400206: Tapa 2.13
+    400208: Tapa 2.14
+    400210: Tapa 2.15
+    400212: Tapa 2.16
+    400214: Tapa 2.17
+    400216: Tapa 2.18
+    400218: Tapa 2.2
+    400220: Tapa 2.3
+    400222: Tapa 2.4
+    400224: Tapa 2.5
+    400226: Tapa 2.6
+    400228: Tapa 2.7
+    400230: Tapa 2.8
+    400232: Tapa 2.9
+    400234: Texto
+    400236: Texto.2
+    400238: Texto.3
+    400240: x
+    2300000: +.2
+    2300002: -.2
+    2300004: 1.4
+    2300006: 9
+    2300008: a
+    2300010: C__psula
+    2300012: Camara Frontal
+    2300014: Cilindro
+    2300016: Cilindro.1
+    2300018: Cilindro.2
+    2300020: Cilindro.4
+    2300022: Cubo
+    2300024: Cubo.1
+    2300026: Disco
+    2300028: Disco.1
+    2300030: e
+    2300032: e.2
+    2300034: g
+    2300036: i
+    2300038: l
+    2300040: M
+    2300042: Micro
+    2300044: Nurbes Altavoces.2
+    2300046: NURBS Extrusi__n .4
+    2300048: NURBS Forro.4
+    2300050: p
+    2300052: Pantalla LED
+    2300054: Redondeado 1.2
+    2300056: Redondeado 2.2
+    2300058: s
+    2300060: Tapa 1
+    2300062: Tapa 1.10
+    2300064: Tapa 1.11
+    2300066: Tapa 1.12
+    2300068: Tapa 1.13
+    2300070: Tapa 1.14
+    2300072: Tapa 1.15
+    2300074: Tapa 1.17
+    2300076: Tapa 1.18
+    2300078: Tapa 1.2
+    2300080: Tapa 1.3
+    2300082: Tapa 1.4
+    2300084: Tapa 1.5
+    2300086: Tapa 1.6
+    2300088: Tapa 1.7
+    2300090: Tapa 1.8
+    2300092: Tapa 1.9
+    2300094: Tapa 2
+    2300096: Tapa 2.10
+    2300098: Tapa 2.11
+    2300100: Tapa 2.12
+    2300102: Tapa 2.13
+    2300104: Tapa 2.14
+    2300106: Tapa 2.17
+    2300108: Tapa 2.2
+    2300110: Tapa 2.3
+    2300112: Tapa 2.4
+    2300114: Tapa 2.5
+    2300116: Tapa 2.6
+    2300118: Tapa 2.7
+    2300120: Tapa 2.8
+    2300122: Tapa 2.9
+    2300124: x
+    3300000: +.2
+    3300002: -.2
+    3300004: 1.4
+    3300006: 9
+    3300008: a
+    3300010: C__psula
+    3300012: Camara Frontal
+    3300014: Cilindro
+    3300016: Cilindro.1
+    3300018: Cilindro.2
+    3300020: Cilindro.4
+    3300022: Cubo
+    3300024: Cubo.1
+    3300026: Disco
+    3300028: Disco.1
+    3300030: e
+    3300032: e.2
+    3300034: g
+    3300036: i
+    3300038: l
+    3300040: M
+    3300042: Micro
+    3300044: Nurbes Altavoces.2
+    3300046: NURBS Extrusi__n .4
+    3300048: NURBS Forro.4
+    3300050: p
+    3300052: Pantalla LED
+    3300054: Redondeado 1.2
+    3300056: Redondeado 2.2
+    3300058: s
+    3300060: Tapa 1
+    3300062: Tapa 1.10
+    3300064: Tapa 1.11
+    3300066: Tapa 1.12
+    3300068: Tapa 1.13
+    3300070: Tapa 1.14
+    3300072: Tapa 1.15
+    3300074: Tapa 1.17
+    3300076: Tapa 1.18
+    3300078: Tapa 1.2
+    3300080: Tapa 1.3
+    3300082: Tapa 1.4
+    3300084: Tapa 1.5
+    3300086: Tapa 1.6
+    3300088: Tapa 1.7
+    3300090: Tapa 1.8
+    3300092: Tapa 1.9
+    3300094: Tapa 2
+    3300096: Tapa 2.10
+    3300098: Tapa 2.11
+    3300100: Tapa 2.12
+    3300102: Tapa 2.13
+    3300104: Tapa 2.14
+    3300106: Tapa 2.17
+    3300108: Tapa 2.2
+    3300110: Tapa 2.3
+    3300112: Tapa 2.4
+    3300114: Tapa 2.5
+    3300116: Tapa 2.6
+    3300118: Tapa 2.7
+    3300120: Tapa 2.8
+    3300122: Tapa 2.9
+    3300124: x
+    4300000: Cubo.1
+    4300002: -.2
+    4300004: Tapa 1
+    4300006: Tapa 2
+    4300008: +.2
+    4300010: Tapa 1.2
+    4300012: Tapa 2.2
+    4300014: Cilindro.1
+    4300016: Cilindro
+    4300018: 1.4
+    4300020: Tapa 1.3
+    4300022: Tapa 2.3
+    4300024: 9
+    4300026: Tapa 1.4
+    4300028: Tapa 2.4
+    4300030: M
+    4300032: Tapa 1.5
+    4300034: Tapa 2.5
+    4300036: e
+    4300038: Tapa 1.6
+    4300040: Tapa 2.6
+    4300042: g
+    4300044: Tapa 1.7
+    4300046: Tapa 2.7
+    4300048: a
+    4300050: Tapa 1.8
+    4300052: Tapa 2.8
+    4300054: p
+    4300056: Tapa 1.9
+    4300058: Tapa 2.9
+    4300060: i
+    4300062: Tapa 1.10
+    4300064: Tapa 2.10
+    4300066: x
+    4300068: Tapa 1.11
+    4300070: Tapa 2.11
+    4300072: e.2
+    4300074: Tapa 1.12
+    4300076: Tapa 2.12
+    4300078: l
+    4300080: Tapa 1.13
+    4300082: Tapa 2.13
+    4300084: s
+    4300086: Tapa 1.14
+    4300088: Tapa 2.14
+    4300090: C__psula
+    4300092: Disco
+    4300094: Disco.1
+    4300096: Cubo
+    4300098: Pantalla LED
+    4300100: Tapa 1.15
+    4300102: NURBS Extrusi__n .4
+    4300104: Redondeado 1.2
+    4300106: Tapa 1.17
+    4300108: Redondeado 2.2
+    4300110: Tapa 2.17
+    4300112: NURBS Forro.4
+    4300114: Tapa 1.18
+    4300116: Cilindro.2
+    4300118: Cilindro.4
+    4300120: Camara Frontal
+    4300122: Micro
+    4300124: Nurbes Altavoces.2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Interactable : MonoBehaviour {
+public class Actionable : MonoBehaviour {
+	public string actionName;
 
-	// Use this for initialization
-//	void Start () {	}
-
-	public virtual void Interact() {
+	public virtual void Use() {
 		Debug.Log("Interact");
 	}
 	

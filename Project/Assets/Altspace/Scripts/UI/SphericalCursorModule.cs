@@ -10,7 +10,9 @@ public class SphericalCursorModule : MonoBehaviour {
 	
 	// This is the layer mask to use when performing the ray cast for the objects.
 	// The furniture in the room is in layer 8, everything else is not.
-	private const int ColliderMask = (1 << 8);
+//	private const int ColliderMask = (1 << 8);
+
+	public LayerMask colliderMask;
 
 	// This is the Cursor game object. Your job is to update its transform on each frame.
 	private GameObject Cursor;
@@ -40,7 +42,9 @@ public class SphericalCursorModule : MonoBehaviour {
 			// if so, then disable the cursor for now
 			CursorMeshRenderer.enabled = false;
 			// and reset the selection
-			Selectable.CurrentSelection = null;
+			Selectable.CurrentHighlight = null;
+
+			MenuButton.CurrentHovered = null;
 		} else {
 			// re-enable the cursor incase we were just mouse looking
 			CursorMeshRenderer.enabled = true;
@@ -58,8 +62,10 @@ public class SphericalCursorModule : MonoBehaviour {
 			// normalize the direction
 			cursorDirection.Normalize();
 			// Perform ray cast to find object cursor is pointing at.
-			RaycastHit[] cursorHits = Physics.RaycastAll(this.transform.position, cursorDirection, SphericalCursorModule.MaxDistance, SphericalCursorModule.ColliderMask);	
+			RaycastHit[] cursorHits = Physics.RaycastAll(this.transform.position, cursorDirection, SphericalCursorModule.MaxDistance, this.colliderMask);
+//			                                             SphericalCursorModule.ColliderMask);	
 			RaycastHit cursorHit = new RaycastHit();	
+
 			// find the closest cursor hit to us
 			float cursorHitPointDistance = float.MaxValue;
 			// if we got a hit...
@@ -76,13 +82,31 @@ public class SphericalCursorModule : MonoBehaviour {
 			// Update highlighted object based upon the raycast.
 			// If the cursor hit an object
 			if (cursorHit.collider != null) {
+				if (MenuButton.CurrentHovered != null) {
+					MenuButton.CurrentHovered.SetHovered(false);
+				}
+
 				// place the cursor at the hit point position
 				this.Cursor.transform.position = cursorHit.point;
 				// set the cursor scale based on the distance to the hit point
 				float cursorScale = (cursorHitPointDistance * this.DistanceScaleFactor + 1.0f) / 2.0f;
 				this.Cursor.transform.localScale = new Vector3(cursorScale, cursorScale, cursorScale);
 				// update the current selection
-				Selectable.CurrentSelection = cursorHit.collider.gameObject;
+				MenuButton menuButton = cursorHit.collider.GetComponent<MenuButton>();
+
+				if (menuButton != null) {
+					Selectable.CurrentHighlight = null;
+
+					MenuButton.CurrentHovered = menuButton;
+
+					menuButton.SetHovered(true);
+				} else {
+					MenuButton.CurrentHovered = null;
+
+					Selectable selectable = cursorHit.collider.GetComponent<Selectable>();
+
+					Selectable.CurrentHighlight = selectable;
+				}
 			}
 			else {
 				// we didn't hit anything, so let's put the cursor on the surface of a virtual sphere around the player
@@ -95,7 +119,13 @@ public class SphericalCursorModule : MonoBehaviour {
 				// revert the scale to default
 				this.Cursor.transform.localScale = this.DefaultCursorScale;
 				// reset the current selection
-				Selectable.CurrentSelection = null;
+				Selectable.CurrentHighlight = null;
+
+				if (MenuButton.CurrentHovered != null) {
+					MenuButton.CurrentHovered.SetHovered(false);
+
+					MenuButton.CurrentHovered = null;
+				}
 			}
 		}
 	}

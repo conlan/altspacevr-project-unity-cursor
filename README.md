@@ -1,12 +1,12 @@
 # AltspaceVR Programming Project - Unity Cursor
 
-## Description
-
-# Some Objectives:
-
-Find your phone!
-
 ## Instructions
+
+1. Find your phone.
+
+2. Construct a fort where X marks the spot.
+
+3. Tweet a photo of your creation!
     
 ## Known Issues
 
