@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Altspace\Shaders\SphericalCursorShader.shader" />
      <None Include="Assets\Altspace\Shaders\InterfaceShader.shader" />
  <Reference Include="UnityEngine.UI">

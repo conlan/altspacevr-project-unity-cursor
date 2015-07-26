@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Playable : Actionable {
+public class Piano : Actionable {
 	public AudioClip clip;
 
 	// Use this for initialization

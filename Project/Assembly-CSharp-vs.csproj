@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Altspace\Scripts\Actions\Actionable.cs" />
+     <Compile Include="Assets\Altspace\Scripts\Actions\Fireplace.cs" />
      <Compile Include="Assets\Altspace\Scripts\Actions\LightSwitch.cs" />
      <Compile Include="Assets\Altspace\Scripts\Actions\Phone.cs" />
-     <Compile Include="Assets\Altspace\Scripts\Actions\Playable.cs" />
+     <Compile Include="Assets\Altspace\Scripts\Actions\Piano.cs" />
      <Compile Include="Assets\Altspace\Scripts\Actions\Pushable.cs" />
      <Compile Include="Assets\Altspace\Scripts\PrefabManager.cs" />
      <Compile Include="Assets\Altspace\Scripts\UI\LockCursor.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Altspace\Scripts\Utility\TimedDestroyable.cs" />
      <Compile Include="Assets\Altspace\Scripts\Utility\Translatable.cs" />
      <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Altspace\Shaders\SphericalCursorShader.shader" />
      <None Include="Assets\Altspace\Shaders\InterfaceShader.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
