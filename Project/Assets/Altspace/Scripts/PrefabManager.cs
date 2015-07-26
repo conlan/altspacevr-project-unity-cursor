@@ -7,6 +7,7 @@ public class PrefabManager : MonoBehaviour {
 	public GameObject menuButtonPrefab;
 
 	public AudioClip createMenuClip;
+	public AudioClip lightSwitchClip;
 
 	public static PrefabManager Instance {
 		get

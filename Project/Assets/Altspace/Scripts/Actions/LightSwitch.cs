@@ -23,5 +23,7 @@ public class LightSwitch : Actionable {
 		this.lightSource.enabled = !this.lightSource.enabled;
 
 		this.UpdateActionName();
+
+		AudioSource.PlayClipAtPoint(PrefabManager.Instance.lightSwitchClip, this.transform.position);
 	}
 }
