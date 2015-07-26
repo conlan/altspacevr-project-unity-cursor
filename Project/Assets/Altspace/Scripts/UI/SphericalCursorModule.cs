@@ -63,18 +63,31 @@ public class SphericalCursorModule : MonoBehaviour {
 			cursorDirection.Normalize();
 			// Perform ray cast to find object cursor is pointing at.
 			RaycastHit[] cursorHits = Physics.RaycastAll(this.transform.position, cursorDirection, SphericalCursorModule.MaxDistance, this.colliderMask);
-//			                                             SphericalCursorModule.ColliderMask);	
-			RaycastHit cursorHit = new RaycastHit();	
+
+			RaycastHit cursorHit = new RaycastHit();
 
 			// find the closest cursor hit to us
 			float cursorHitPointDistance = float.MaxValue;
+			// whether the closest hit is a menu button
+			bool closestHitIsMenuButton = false;
+
 			// if we got a hit...
 			if (cursorHits.Length > 0) {
 				foreach (RaycastHit hit in cursorHits) {
+					MenuButton menuButton = hit.collider.GetComponent<MenuButton>();
+					// if our closest hit is a menu button and this collider is NOT a menu button, just continue
+					if ((closestHitIsMenuButton) && (menuButton == null)) continue;
+
 					float dist = Vector3.Distance(hit.point, this.transform.position);
-					if (dist < cursorHitPointDistance) {
+
+					if ((dist < cursorHitPointDistance) ||
+					    ((closestHitIsMenuButton == false) && (menuButton != null))) { // if this is a menu button it takes priority over our current closest hit if that's a non menu button
 						cursorHit = hit;
 						cursorHitPointDistance = dist;
+
+						if (menuButton != null) {
+							closestHitIsMenuButton = true;
+						}
 					}
 				}
 			}
