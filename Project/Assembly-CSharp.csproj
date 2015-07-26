@@ -49,6 +49,7 @@
      <Compile Include="Assets\Altspace\Scripts\Actions\Actionable.cs" />
      <Compile Include="Assets\Altspace\Scripts\Actions\LightSwitch.cs" />
      <Compile Include="Assets\Altspace\Scripts\Actions\Phone.cs" />
+     <Compile Include="Assets\Altspace\Scripts\Actions\Playable.cs" />
      <Compile Include="Assets\Altspace\Scripts\Actions\Pushable.cs" />
      <Compile Include="Assets\Altspace\Scripts\PrefabManager.cs" />
      <Compile Include="Assets\Altspace\Scripts\UI\LockCursor.cs" />
