@@ -6,8 +6,6 @@ public class Selectable : MonoBehaviour {
 
 	public static Selectable CurrentSelected { get; set; }
 
-	public static bool isShowingMenu;
-
 	public Material NormalMaterial;
 	public Material HighlightMaterial;
 
@@ -84,20 +82,18 @@ public class Selectable : MonoBehaviour {
 	}
 
 	public void CreateMenu() {
-		Selectable.isShowingMenu = true;
-
 		this.actionButtons = new ArrayList();
 
 		float menuSetupDuration = 0.05f;
-
+		// calculate the direction to the camera from here
 		Vector3 directionToCamera = Camera.main.transform.position - this.transform.position;
-
+		// calculate the distance
 		float distanceToCamera = Vector3.Distance(Camera.main.transform.position, this.transform.position);
-
+		// find the target position for this menu (distance to the camera - 2 pts, but at least halfway towards the camera)
 		Vector3 targetPositionCenter = this.transform.position + directionToCamera.normalized * Mathf.Max(0.5f, (distanceToCamera - 2));
-
+		// play the create menu clip
 		AudioSource.PlayClipAtPoint(PrefabManager.Instance.createMenuClip, Vector3.zero);
-
+		// determine the starting menu button position offset, based on how many actions we'll show
 		float targetPositionOffset = -(this.actions.Length - 1) / 2.0f;
 
 		for (int i = 0; i < this.actions.Length; i++) {
@@ -108,13 +104,13 @@ public class Selectable : MonoBehaviour {
 			MenuButton menuButtonRef = menuButton.GetComponent<MenuButton>();
 
 			menuButtonRef.SetAction(action);
-
+			// place the menu buttons from bottom to op
 			Vector3 targetPosition = targetPositionCenter + (targetPositionOffset * 0.2f) * Vector3.up;
-
+			// move the menu button from here to it's target position to create a trail
 			menuButtonRef.translatable.TranslateTo(targetPosition, menuSetupDuration);
-
+			// save the script reference
 			actionButtons.Add(menuButtonRef);
-
+			// bump the next menu position upwards
 			targetPositionOffset += 1;
 		}
 	}
