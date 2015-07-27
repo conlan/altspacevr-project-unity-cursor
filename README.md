@@ -12,7 +12,7 @@
 
 ## Acknowledgements
 
-* Assets used in this project are from *
+*Assets used in this project are from* <br/>
 
 [ADG_Textures] (https://www.assetstore.unity3d.com/en/#!/content/12567) <br/>
 [Rustic, Knobby Door] (https://www.assetstore.unity3d.com/en/#!/content/860) <br/>
