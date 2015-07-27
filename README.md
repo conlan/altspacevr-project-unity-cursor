@@ -5,6 +5,11 @@
 - Walk with WASD. Use the mouse to interact with objects. Hold down Left or Right SHIFT to look around.
 
 - Find and answer your cell phone.
+
+## Cursor Improvements
+
+- Hide the cursor while mouse looking.
+- Click an object to see the available actions.
    
 ## Known Issues
 

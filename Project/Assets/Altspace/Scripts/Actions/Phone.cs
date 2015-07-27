@@ -30,13 +30,13 @@ public class Phone : Actionable {
 		Vector3 phoneCallPosition = Camera.main.transform.position + Camera.main.transform.forward.normalized * 1.0f;
 		
 		GameObject gameObj = Instantiate(PrefabManager.Instance.phoneCallPrefab, phoneCallPosition, Quaternion.identity) as GameObject;
-		
+		// have the object face the camera directly
 		gameObj.transform.LookAt(Camera.main.transform);
-		
+		// now attach it to the camera
 		gameObj.transform.parent = Camera.main.transform;
-		
+		// grab the phone call script
 		PhoneCall phoneCall = gameObj.GetComponent<PhoneCall>();
-
+		// present a message!
 		phoneCall.Present("Knock knock, Neo...");
 	}
 
