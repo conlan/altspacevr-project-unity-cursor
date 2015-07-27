@@ -1,4 +1,8 @@
-# AltspaceVR Programming Project - Unity Cursor
+# AltspaceVR Programming Project - Unity Cursor <br/>
+
+[LinkedIn] (https://www.linkedin.com/in/conlan)
+[Portfolio] (www.conlanrios.com/p/about-me.html)
+[Twitter] (https://twitter.com/conlan)
 
 ## Instructions
 
@@ -25,5 +29,3 @@
 [iPhone 5 Model] (http://tf3dm.com/download-page.php?url=iphone-5-41055) <br/>
 [Piano] (https://www.assetstore.unity3d.com/en/#!/content/154) <br/>
 [Refridgerator] (https://www.assetstore.unity3d.com/en/#!/content/64) 
-
-
