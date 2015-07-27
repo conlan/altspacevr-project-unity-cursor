@@ -1509,7 +1509,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 60.9981918, y: 22.7297649, z: 100.861916}
+  m_Size: {x: 60.9981918, y: 22.7297649, z: 95}
   m_Center: {x: -1.52587891e-05, y: -3.81469727e-06, z: -1.14440918e-05}
 --- !u!23 &471242915
 Renderer:
