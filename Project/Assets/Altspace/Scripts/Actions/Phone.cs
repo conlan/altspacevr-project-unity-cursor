@@ -20,7 +20,24 @@ public class Phone : Actionable {
 			this.StartRinging();
 		} else {
 			this.StopRinging();
+
+			this.AnswerPhone();
 		}
+	}
+
+	public void AnswerPhone() {
+		// create a phone call instance for the player
+		Vector3 phoneCallPosition = Camera.main.transform.position + Camera.main.transform.forward.normalized * 1.0f;
+		
+		GameObject gameObj = Instantiate(PrefabManager.Instance.phoneCallPrefab, phoneCallPosition, Quaternion.identity) as GameObject;
+		
+		gameObj.transform.LookAt(Camera.main.transform);
+		
+		gameObj.transform.parent = Camera.main.transform;
+		
+		PhoneCall phoneCall = gameObj.GetComponent<PhoneCall>();
+
+		phoneCall.Present("Knock knock, Neo...");
 	}
 
 	public void StopRinging() {

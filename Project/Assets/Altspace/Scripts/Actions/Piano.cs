@@ -12,7 +12,6 @@ public class Piano : Actionable {
 	}
 	
 	public override void Use() {
-
 		AudioSource.PlayClipAtPoint(clip, this.transform.position);
 	}
 }

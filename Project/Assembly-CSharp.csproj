@@ -55,14 +55,15 @@
      <Compile Include="Assets\Altspace\Scripts\PrefabManager.cs" />
      <Compile Include="Assets\Altspace\Scripts\UI\LockCursor.cs" />
      <Compile Include="Assets\Altspace\Scripts\UI\MenuButton.cs" />
+     <Compile Include="Assets\Altspace\Scripts\UI\PhoneCall.cs" />
      <Compile Include="Assets\Altspace\Scripts\UI\SphericalCursorModule.cs" />
+     <Compile Include="Assets\Altspace\Scripts\Utility\Scalable.cs" />
      <Compile Include="Assets\Altspace\Scripts\Utility\Selectable.cs" />
      <Compile Include="Assets\Altspace\Scripts\Utility\TimedDestroyable.cs" />
      <Compile Include="Assets\Altspace\Scripts\Utility\Translatable.cs" />
      <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Altspace\Shaders\SphericalCursorShader.shader" />
-     <None Include="Assets\Altspace\Shaders\InterfaceShader.shader" />
      <None Include="Assets\license.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
