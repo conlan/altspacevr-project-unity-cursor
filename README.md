@@ -1,8 +1,8 @@
 # AltspaceVR Programming Project - Unity Cursor <br/>
 
-[LinkedIn] (https://www.linkedin.com/in/conlan)
-[Portfolio] (www.conlanrios.com/p/about-me.html)
-[Twitter] (https://twitter.com/conlan)
+[LinkedIn] (https://www.linkedin.com/in/conlan) <br/>
+[Portfolio] (www.conlanrios.com/p/about-me.html) <br/>
+[Twitter] (https://twitter.com/conlan) <br/>
 
 ## Instructions
 
